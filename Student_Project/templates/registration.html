@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="icon" href="{% static 'images/icon.jpg' %}"/>
+    <title>TEACHER EVALUATION</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+ <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+
+
+
+
+<body class="body1">
+  <header hd1>
+  <!-- navbar -->
+
+        
+            <div class="container-flex">
+             
+                <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top  scrolled" id="nav">
+                    <img width="50px" src="{% static 'images/icon.jpg'%}" alt="images">
+                    <a class="navbar-brand" href="#"><b>WISDOM ELEMENTARY SCHOOL</b></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                              </li>
+                              <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+                              </li>
+                             
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'login' %}">Login</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'reg' %}">Signup</a>
+                              </li>
+                              
+                              
+                              
+                            </ul>
+                        </div>
+                </nav>
+            </div>
+        <!-- <nav ends -->
+          </header>
+
+          
+<section id="signup">
+    <div class="container-fluid">
+        <div class="row space justify-content-center pt-5 ">
+            <div class="col-md-4">
+                <form action="" method="POST" style="border:1px  black border-spacing=15px">
+                  {% csrf_token %}
+                    <div class="container mt-3">
+                    <label for="first_name"><b>First Name</b></label>
+                      <input  type="text" placeholder="EnterFirst Name" name="first_name" required ><br><br>
+
+                      <label for="last_name"><b>Last Name</b></label>
+                      <input  type="text" placeholder="Enter Last Name" name="last_name" required ><br><br>
+                     <div class="form-group">
+                               <p id="result" style="color:red;"></p>
+                          </div>
+                      <label for="username"><b>Username</b></label>
+                      <input type="text" placeholder="Enter Username" name="username"  id="username" onkeyup="checkuser()" required><br><br>
+                  
+                      <label for="email"><b>Email</b></label>
+                      <input type="email" placeholder="Enter Email" name="email" required><br><br>
+
+                      <label for="phn_number"><b>Phone Number</b></label>
+                      <input type="text" name="phn_number" placeholder="888 888 8888" >
+                  
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" required id="passwd1"><br><br>
+                  
+                      <label for="psw-repeat"><b>Repeat Password</b></label>
+                      <input type="password" placeholder="Repeat Password" name="psw-repeat" required id="passwd2"><br><br>
+                      
+
+                      <div class="form-group">
+                        <label for="">User Type</label>
+                        <select name="utype" class="form-control">
+                          <option value="cust">I am Admin </option>
+                          <option value="employee">I am Student</option>
+                        </select>
+                        
+                      </div>
+                      
+                      <div class="clearfix"></div>
+                        <button type="submit" id="submitbtn" class="signupbtn btn btn-info" >Sign Up</button>
+                      </div>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+</body>
+</html>

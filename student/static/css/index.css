@@ -1,0 +1,116 @@
+body{
+    background: #ffe6ff !important;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
+    box-sizing:border-box;
+}
+#nav{
+    background-color: white !important;
+}
+.body1{
+    background: white !important;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
+    box-sizing:border-box;
+}
+
+.hd1{
+   
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        position:relative;
+    
+}
+#in-nav{
+    background-color:rgb(0,97,97) !important
+}
+.ft-1{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:rgb(0,97,97);
+    color: black;
+    text-align: center;
+}
+
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:rgba(222, 192, 222, 0.288);
+    color: white;
+    text-align: center;
+   /* background-color: rgba(128,128,take 2 or 3 stars0.67)*/
+  
+ }
+
+
+/* sign up */
+
+#signup{
+    
+        height: 100vh;
+        width: 100vw; 
+         /* background: linear-gradient(rgba(252, 87, 255, 0.1), rgba(128, 82, 129, 0.5)), url(https://www.vecteezy.com/free-photos/car) center no-repeat;  */
+        /* background-size: cover; */
+        /* position: relative; */
+    }
+
+    /* label{
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        text-align: left;
+        width: 400px;
+        line-height: 26px;
+        margin-bottom: 10px
+          
+    } */
+     input {
+        width: 100%;
+            padding: 10px 15px;
+            margin: 5px 0;
+            box-sizing: border-box;
+           
+      } 
+label{
+    color:black;
+    /* background-color:white ; */
+  
+}
+
+
+/* contact */
+
+
+.conheader{
+    height: 80vh;
+    max-width: 100vw;
+   
+    background-size: cover;
+    position: relative;
+}
+.contact-text{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    text-align: center;
+}
+
+
+/* about us */
+.abtheader{
+    height: 80vh;
+    max-width: 100vw;
+   
+    background-size: cover;
+    position: relative;
+}
